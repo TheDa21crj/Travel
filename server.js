@@ -27,8 +27,6 @@ app.post("/upload", (req, res) => {
                 filePath: `/uploads/${file.name}`,
                 textPdf: textPdf,
             });
-
-            console.log();
         });
     });
 });
