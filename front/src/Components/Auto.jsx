@@ -6,7 +6,9 @@ export default function Auto() {
     <div>
       <p>Auto</p>
 
-      <FileUpload />
+      <div className="FileUploadPDiv">
+        <FileUpload />
+      </div>
     </div>
   );
 }
