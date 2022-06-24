@@ -6,8 +6,6 @@ export default function Particulars() {
     age: "",
     sex: "",
     address: "",
-    From: "",
-    To: "",
   });
 
   const DataInp = (e) => {
@@ -27,8 +25,6 @@ export default function Particulars() {
       age: "",
       sex: "",
       address: "",
-      From: "",
-      To: "",
     });
   };
   return (
@@ -73,6 +69,15 @@ export default function Particulars() {
         className="PartInp"
         placeholder="Enter your Travel Destination"
       />
+
+      <input
+        type="text"
+        name="address"
+        className="PartInp"
+        placeholder="From"
+      />
+
+      <input type="text" name="address" className="PartInp" placeholder="To" />
 
       <button className="btn btn-primary btn-block mt-4" onClick={PostData}>
         Submit
