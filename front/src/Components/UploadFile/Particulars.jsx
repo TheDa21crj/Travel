@@ -45,6 +45,7 @@ export default function Particulars() {
       });
     }
   };
+
   return (
     <div>
       <p className="Particulars">Particulars</p>
