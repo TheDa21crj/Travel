@@ -6,7 +6,6 @@ export default function Particulars() {
     age: "",
     sex: "",
     address: "",
-    travel: "",
     From: "",
     To: "",
   });
@@ -28,7 +27,6 @@ export default function Particulars() {
       age: "",
       sex: "",
       address: "",
-      travel: "",
       From: "",
       To: "",
     });
@@ -49,7 +47,7 @@ export default function Particulars() {
         name="age"
         className="PartInp"
         placeholder="Enter Your Age"
-        value={showData.name}
+        value={showData.age}
         onChange={DataInp}
       />
       <input
@@ -57,7 +55,7 @@ export default function Particulars() {
         name="sex"
         className="PartInp"
         placeholder="Enter Your Sex"
-        value={showData.name}
+        value={showData.sex}
         onChange={DataInp}
       />
       <input
@@ -65,9 +63,17 @@ export default function Particulars() {
         name="address"
         className="PartInp"
         placeholder="Enter Your Address"
-        value={showData.name}
+        value={showData.address}
         onChange={DataInp}
       />
+
+      <input
+        type="text"
+        name="address"
+        className="PartInp"
+        placeholder="Enter your Travel Destination"
+      />
+
       <button className="btn btn-primary btn-block mt-4" onClick={PostData}>
         Submit
       </button>
