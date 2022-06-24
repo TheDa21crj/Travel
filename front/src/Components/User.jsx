@@ -15,8 +15,6 @@ export default function User() {
     const value = e.target.value;
 
     setData({ ...showData, [name]: value });
-
-    console.log(showData);
   };
 
   const PostData = async () => {
