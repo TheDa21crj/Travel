@@ -8,6 +8,11 @@
     width: 80%;
 }
 
-#customFile {
-    border: 1px solid black;
+.PartInp {
+    outline: none;
+    padding: 0px 10px;
+    height: calc(1.5em + 0.75rem + 2px);
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    width: 100%;
 }
