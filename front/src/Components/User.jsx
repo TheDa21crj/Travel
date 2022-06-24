@@ -8,6 +8,8 @@ export default function User() {
     sex: "",
     address: "",
     travel: "",
+    From: "",
+    To: "",
   });
 
   const DataInp = (e) => {
@@ -75,7 +77,7 @@ export default function User() {
         <div>
           <input
             type="text"
-            name="DurationStart"
+            name="From"
             id=""
             placeholder="From"
             className="InpField"
@@ -84,11 +86,11 @@ export default function User() {
           />
           <input
             type="text"
-            name="DurationStart"
+            name="To"
             id=""
             placeholder="To"
             className="InpField"
-            value={showData.From}
+            value={showData.To}
             onChange={DataInp}
           />
         </div>
