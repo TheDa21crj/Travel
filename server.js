@@ -1,5 +1,6 @@
 const express = require("express");
 const fileUpload = require("express-fileupload");
+const pdfParse = require("pdf-parse");
 
 const app = express();
 
@@ -19,11 +20,11 @@ app.post("/upload", (req, res) => {
             return res.status(500).send(err);
         }
 
-        // res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
-    });
+        pdfParse(req.files.pdfFile).then((result) => {
+            res.send(result.text);
+        });
 
-    pdfParse(req.files.pdfFile).then((result) => {
-        res.send(result.text);
+        // res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
     });
 });
 
