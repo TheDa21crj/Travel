@@ -63,6 +63,14 @@ export default function User() {
           value={showData.address}
           onChange={DataInp}
         />
+        <input
+          type="text"
+          name="travel"
+          id=""
+          className="InpField"
+          value={showData.address}
+          onChange={DataInp}
+        />
         <button className="UserSubmit" onClick={PostData}>
           Submit
         </button>
