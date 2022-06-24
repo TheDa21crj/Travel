@@ -2,6 +2,12 @@ import React, { useState } from "react";
 import "./Css/User.css";
 
 export default function User() {
+  const [showData, setData] = useState({
+    name: "",
+    age: "",
+    sex: "",
+    address: "",
+  });
   return (
     <div>
       <div className="InpPDiv">
