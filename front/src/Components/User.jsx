@@ -8,6 +8,14 @@ export default function User() {
     sex: "",
     address: "",
   });
+
+  const DataInp = (e) => {
+    const name = e.target.name;
+    const value = e.target.value;
+
+    setUser({ ...showUser, [name]: value });
+  };
+
   return (
     <div>
       <div className="InpPDiv">
