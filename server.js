@@ -20,14 +20,19 @@ app.post("/upload", (req, res) => {
             return res.status(500).send(err);
         }
 
+        pdfParse(file).then((result) => {
+            let textPdf = result.text;
+            res.json({
+                fileName: file.name,
+                filePath: `/uploads/${file.name}`,
+                textPdf: textPdf,
+            });
+
+            console.log();
+        });
+
         // res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
     });
-
-    pdfParse(file).then((result) => {
-        console.log(result.text);
-    });
-
-    res.json({ message: `Hello` });
 });
 
 const port = process.env.PORT || 5000;
