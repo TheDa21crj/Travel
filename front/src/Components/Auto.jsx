@@ -10,6 +10,8 @@ export default function Auto() {
       <div className="FileUploadDiv">
         <div className="FileUploadPDiv">
           <FileUpload />
+          <br />
+          Particulars
         </div>
       </div>
     </div>
