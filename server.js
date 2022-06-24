@@ -14,17 +14,17 @@ app.post("/upload", (req, res) => {
 
     const file = req.files.file;
 
+    pdfParse(file).then((result) => {
+        console.log(result.text);
+    });
+
     file.mv(`${__dirname}/front/public/uploads/${file.name}`, (err) => {
         if (err) {
             console.error(err);
             return res.status(500).send(err);
         }
 
-        pdfParse(req.files.pdfFile).then((result) => {
-            res.send(result.text);
-        });
-
-        // res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
+        res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
     });
 });
 
