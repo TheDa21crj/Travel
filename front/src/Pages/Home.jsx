@@ -5,7 +5,7 @@ export default function Home() {
     <div>
       <div>
         <div>Filled by the User</div>
-        <div></div>
+        <div>Extract automatically from the document</div>
       </div>
     </div>
   );
