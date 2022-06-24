@@ -57,7 +57,9 @@ export default function User() {
           value={showData.address}
           onChange={DataInp}
         />
-        <button className="UserSubmit">Submit</button>
+        <button className="UserSubmit" onClick={PostData}>
+          Submit
+        </button>
       </div>
     </div>
   );
