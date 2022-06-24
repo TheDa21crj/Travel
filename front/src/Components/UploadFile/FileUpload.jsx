@@ -39,8 +39,8 @@ const FileUpload = () => {
 
       const { fileName, filePath, textPdf } = res.data;
 
-      setUploadedFile({ fileName, filePath });
-      console.log(textPdf);
+      setUploadedFile({ fileName, filePath, textPdf });
+
       setMessage("File Uploaded");
     } catch (err) {
       if (err.response.status === 500) {
@@ -79,8 +79,8 @@ const FileUpload = () => {
       {uploadedFile ? (
         <div className="row mt-5">
           <div className="col-md-6 m-auto">
-            <h3 className="text-center">{uploadedFile.fileName}</h3>
-            <img style={{ width: "100%" }} src={uploadedFile.filePath} alt="" />
+            <p className="text-center">{uploadedFile.fileName}</p>
+            {/* <img style={{ width: "100%" }} src={uploadedFile.filePath} alt="" /> */}
           </div>
         </div>
       ) : null}
