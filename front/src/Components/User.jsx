@@ -13,7 +13,9 @@ export default function User() {
     const name = e.target.name;
     const value = e.target.value;
 
-    setUser({ ...showUser, [name]: value });
+    setData({ ...showData, [name]: value });
+
+    console.log(showData);
   };
 
   return (
@@ -26,6 +28,7 @@ export default function User() {
           placeholder="Enter Your Name"
           className="InpField"
           value={showData.name}
+          onChange={DataInp}
         />
         <input
           type="text"
@@ -34,6 +37,7 @@ export default function User() {
           placeholder="Enter your Age"
           className="InpField"
           value={showData.age}
+          onChange={DataInp}
         />
         <input
           type="text"
@@ -42,6 +46,7 @@ export default function User() {
           placeholder="Enter your Sex"
           className="InpField"
           value={showData.sex}
+          onChange={DataInp}
         />
         <input
           type="text"
@@ -50,6 +55,7 @@ export default function User() {
           placeholder="Enter your Address"
           className="InpField"
           value={showData.address}
+          onChange={DataInp}
         />
         <button className="UserSubmit">Submit</button>
       </div>
