@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 
 export default function Home() {
+  const { showUser, setUser } = useState(false);
+  const { showAuto, setAuto } = useState(true);
+
   return (
     <div>
       <div>
