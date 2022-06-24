@@ -8,6 +8,10 @@
     width: 80%;
 }
 
+.Particulars {
+    font-size: 1.5rem;
+}
+
 .PartInp {
     outline: none;
     padding: 0px 10px;
@@ -15,4 +19,5 @@
     border: 1px solid lightgrey;
     border-radius: 5px;
     width: 100%;
+    margin-bottom: 24px;
 }
