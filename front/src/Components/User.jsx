@@ -33,6 +33,7 @@ export default function User() {
           placeholder="Enter your Address"
           className="InpField"
         />
+        <button className="UserSubmit">Submit</button>
       </div>
     </div>
   );
