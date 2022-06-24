@@ -7,8 +7,10 @@ export default function Home() {
   return (
     <div>
       <div>
-        <div>Filled by the User</div>
-        <div>Extract automatically from the document</div>
+        <div onClick={setUser(!showUser)}>Filled by the User</div>
+        <div onClick={setAuto(!showAuto)}>
+          Extract automatically from the document
+        </div>
       </div>
     </div>
   );
