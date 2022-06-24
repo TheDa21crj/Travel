@@ -4,7 +4,6 @@ import Auto from "./../Components/Auto";
 
 export default function Home() {
   const { showUser, setUser } = useState(false);
-  const { showAuto, setAuto } = useState(true);
 
   return (
     <div>
