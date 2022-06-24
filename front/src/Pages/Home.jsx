@@ -3,7 +3,7 @@ import User from "./../Components/User";
 import Auto from "./../Components/Auto";
 
 export default function Home() {
-  const { showUser, setUser } = useState(false);
+  const [showDetails, setDetails] = useState(false);
 
   return (
     <div>
@@ -13,7 +13,7 @@ export default function Home() {
           Extract automatically from the document
         </div>
       </div>
-      <div>{showUser ? <User /> : <Auto />}</div>
+      <div>{showDetails ? <User /> : <Auto />}</div>
     </div>
   );
 }
