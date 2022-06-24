@@ -19,29 +19,31 @@ export default function Particulars() {
   const PostData = async () => {
     const { name, age, sex, address } = showData;
 
-    let data = await fetch(
-      "https://travel-511c1-default-rtdb.firebaseio.com/data.json",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          name,
-          age,
-          sex,
-          address,
-        }),
-      }
-    );
+    if (name === "" || age === "" || sex === "" || address === "") {
+      let data = await fetch(
+        "https://travel-511c1-default-rtdb.firebaseio.com/data.json",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            age,
+            sex,
+            address,
+          }),
+        }
+      );
 
-    setData({
-      ...showData,
-      name: "",
-      age: "",
-      sex: "",
-      address: "",
-    });
+      setData({
+        ...showData,
+        name: "",
+        age: "",
+        sex: "",
+        address: "",
+      });
+    }
   };
   return (
     <div>
@@ -81,19 +83,14 @@ export default function Particulars() {
 
       <input
         type="text"
-        name="address"
+        name="Destination"
         className="PartInp"
         placeholder="Enter your Travel Destination"
       />
 
-      <input
-        type="text"
-        name="address"
-        className="PartInp"
-        placeholder="From"
-      />
+      <input type="text" name="From" className="PartInp" placeholder="From" />
 
-      <input type="text" name="address" className="PartInp" placeholder="To" />
+      <input type="text" name="To" className="PartInp" placeholder="To" />
 
       <button className="btn btn-primary btn-block mt-4" onClick={PostData}>
         Submit
