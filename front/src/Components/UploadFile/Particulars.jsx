@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { useJsApiLoader, Autocomplete } from "@react-google-maps/api";
 
 export default function Particulars() {
+  const google = window.google;
+
   const { isLoading } = useJsApiLoader({
     googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
     libraries: ["places"],
