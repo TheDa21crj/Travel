@@ -37,9 +37,11 @@ const FileUpload = () => {
       // Clear percentage
       setTimeout(() => setUploadPercentage(0), 10000);
 
-      const { fileName, filePath } = res.data;
+      // const { fileName, filePath } = res.data;
 
-      setUploadedFile({ fileName, filePath });
+      // setUploadedFile({ fileName, filePath });
+
+      console.log(res.data);
 
       setMessage("File Uploaded");
     } catch (err) {
@@ -55,7 +57,7 @@ const FileUpload = () => {
   return (
     <Fragment>
       {message ? <Message msg={message} /> : null}
-      <form onSubmit={onSubmit}>
+      <form>
         <div className="custom-file mb-4">
           <input
             type="file"
@@ -70,12 +72,14 @@ const FileUpload = () => {
 
         <Progress percentage={uploadPercentage} />
 
-        <input
-          type="submit"
-          value="Upload"
-          className="btn btn-primary btn-block mt-4"
-        />
+        {/* <input */}
+        {/* // type="submit" */}
+        {/* value="Upload" */}
+        {/* className="btn btn-primary btn-block mt-4" */}
+        {/* onClick={onSubmit} */}
+        {/* /> */}
       </form>
+
       {uploadedFile ? (
         <div className="row mt-5">
           <div className="col-md-6 m-auto">
