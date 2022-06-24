@@ -13,9 +13,11 @@
     border-style: solid;
     border-width: 1px;
     border-radius: 5px;
+    width: 300px;
 }
 
 .UserSubmit {
+    margin-top: 10px;
     padding: 10px 20px;
     width: 200px;
     border-style: solid;
