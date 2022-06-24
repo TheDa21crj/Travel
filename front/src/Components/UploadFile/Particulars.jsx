@@ -4,12 +4,7 @@ export default function Particulars() {
   return (
     <div>
       <p>Particulars</p>
-      <input
-        type="text"
-        className=""
-        id="customFile"
-        // onChange={onChange}
-      />
+      <input type="text" className="PartInp" placeholder="Enter Your Name" />
     </div>
   );
 }
