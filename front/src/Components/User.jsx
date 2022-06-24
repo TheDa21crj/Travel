@@ -18,6 +18,10 @@ export default function User() {
     console.log(showData);
   };
 
+  const PostData = async () => {
+    console.log(showData);
+  };
+
   return (
     <div>
       <div className="InpPDiv">
