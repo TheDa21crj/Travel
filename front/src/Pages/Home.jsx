@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div>
       <div>
-        <div onClick={setUser(true)}>Filled by the User</div>
-        <div onClick={setUser(false)}>
+        <div onClick={() => setUser(true)}>Filled by the User</div>
+        <div onClick={() => setUser(false)}>
           Extract automatically from the document
         </div>
       </div>
