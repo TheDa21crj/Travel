@@ -17,7 +17,23 @@ export default function Particulars() {
   };
 
   const PostData = async () => {
-    console.log(showData);
+    const { name, age, sex, address } = showData;
+
+    let data = await fetch(
+      "https://travel-511c1-default-rtdb.firebaseio.com/data.json",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          age,
+          sex,
+          address,
+        }),
+      }
+    );
 
     setData({
       ...showData,
