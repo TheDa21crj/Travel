@@ -22,6 +22,16 @@ app.post("/upload", (req, res) => {
 
         pdfParse(file).then((result) => {
             let textPdf = result.text;
+
+            // for (let i = 0; i < textPdf.length; i++) {
+            //     if (textPdf[i] === " ") {
+            //         console.log();
+            //     } else {
+            //         process.stdout.write(textPdf[i]);
+            //     }
+            // }
+            // console.log(result.text);
+
             res.json({
                 fileName: file.name,
                 filePath: `/uploads/${file.name}`,
