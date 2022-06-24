@@ -7,6 +7,7 @@ export default function User() {
     age: "",
     sex: "",
     address: "",
+    travel: "",
   });
 
   const DataInp = (e) => {
@@ -68,7 +69,7 @@ export default function User() {
           name="travel"
           id=""
           className="InpField"
-          value={showData.address}
+          value={showData.travel}
           onChange={DataInp}
         />
         <button className="UserSubmit" onClick={PostData}>
