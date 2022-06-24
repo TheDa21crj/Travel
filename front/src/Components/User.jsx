@@ -20,6 +20,8 @@ export default function User() {
 
   const PostData = async () => {
     console.log(showData);
+
+    setData({ ...showData, name: "", age: "", sex: "", address: "" });
   };
 
   return (
