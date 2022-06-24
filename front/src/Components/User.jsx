@@ -17,7 +17,7 @@ export default function User() {
           id=""
           placeholder="Enter Your Name"
           className="InpField"
-          value={showData.email}
+          value={showData.name}
         />
         <input
           type="text"
@@ -25,7 +25,7 @@ export default function User() {
           id=""
           placeholder="Enter your Age"
           className="InpField"
-          value={showData.email}
+          value={showData.age}
         />
         <input
           type="text"
@@ -33,7 +33,7 @@ export default function User() {
           id=""
           placeholder="Enter your Sex"
           className="InpField"
-          value={showData.email}
+          value={showData.sex}
         />
         <input
           type="text"
@@ -41,7 +41,7 @@ export default function User() {
           id=""
           placeholder="Enter your Address"
           className="InpField"
-          value={showData.email}
+          value={showData.address}
         />
         <button className="UserSubmit">Submit</button>
       </div>
