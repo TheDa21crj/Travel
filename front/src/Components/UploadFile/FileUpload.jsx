@@ -81,7 +81,6 @@ const FileUpload = () => {
           <div className="col-md-6 m-auto">
             <p className="text-center">{uploadedFile.fileName}</p>
             {uploadedFile ? <p>{uploadedFile.textPdf}</p> : ""}
-            {/* <img style={{ width: "100%" }} src={uploadedFile.filePath} alt="" /> */}
           </div>
         </div>
       ) : null}
