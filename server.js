@@ -14,18 +14,20 @@ app.post("/upload", (req, res) => {
 
     const file = req.files.file;
 
-    pdfParse(file).then((result) => {
-        console.log(result.text);
-    });
-
     file.mv(`${__dirname}/front/public/uploads/${file.name}`, (err) => {
         if (err) {
             console.error(err);
             return res.status(500).send(err);
         }
 
-        res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
+        // res.json({ fileName: file.name, filePath: `/uploads/${file.name}` });
     });
+
+    pdfParse(file).then((result) => {
+        console.log(result.text);
+    });
+
+    res.json({ message: `Hello` });
 });
 
 const port = process.env.PORT || 5000;
