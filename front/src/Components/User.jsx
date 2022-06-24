@@ -71,6 +71,28 @@ export default function User() {
           value={showData.travel}
           onChange={DataInp}
         />
+        <p>Duration of Travel</p>
+        <div>
+          <input
+            type="text"
+            name="DurationStart"
+            id=""
+            placeholder="From"
+            className="InpField"
+            value={showData.From}
+            onChange={DataInp}
+          />
+          <input
+            type="text"
+            name="DurationStart"
+            id=""
+            placeholder="To"
+            className="InpField"
+            value={showData.From}
+            onChange={DataInp}
+          />
+        </div>
+
         <button className="UserSubmit" onClick={PostData}>
           Submit
         </button>
