@@ -24,10 +24,11 @@ app.post("/upload", (req, res) => {
             let textPdf = result.text;
 
             // for (let i = 0; i < textPdf.length; i++) {
+            //     let word = "";
             //     if (textPdf[i] === " ") {
-            //         console.log();
+            //         console.log(word);
             //     } else {
-            //         process.stdout.write(textPdf[i]);
+            //         word += textPdf[i];
             //     }
             // }
             // console.log(result.text);
