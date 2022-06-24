@@ -1,6 +1,12 @@
 import React, { useState } from "react";
+import { useJsApiLoader, Autocomplete } from "@react-google-maps/api";
 
 export default function Particulars() {
+  const { isLoading } = useJsApiLoader({
+    googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
+    libraries: ["places"],
+  });
+
   const [showData, setData] = useState({
     name: "",
     age: "",
@@ -73,14 +79,17 @@ export default function Particulars() {
         value={showData.sex}
         onChange={DataInp}
       />
-      <input
-        type="text"
-        name="address"
-        className="PartInp"
-        placeholder="Enter Your Address"
-        value={showData.address}
-        onChange={DataInp}
-      />
+
+      <Autocomplete>
+        <input
+          type="text"
+          name="address"
+          className="PartInp"
+          placeholder="Enter Your Address"
+          value={showData.address}
+          onChange={DataInp}
+        />
+      </Autocomplete>
 
       <input
         type="text"
