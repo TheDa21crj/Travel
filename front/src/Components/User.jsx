@@ -66,6 +66,7 @@ export default function User() {
           type="text"
           name="travel"
           id=""
+          placeholder="Enter your Travel Destination"
           className="InpField"
           value={showData.travel}
           onChange={DataInp}
