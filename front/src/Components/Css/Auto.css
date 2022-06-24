@@ -7,3 +7,7 @@
 .FileUploadPDiv {
     width: 80%;
 }
+
+#customFile {
+    border: 1px solid black;
+}
