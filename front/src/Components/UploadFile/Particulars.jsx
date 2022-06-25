@@ -4,8 +4,8 @@ import { useJsApiLoader, Autocomplete } from "@react-google-maps/api";
 export default function Particulars() {
   const google = window.google;
 
-  const { isLoading } = useJsApiLoader({
-    googleMapsApiKey: process.env.GOOGLE_MAPS_API_KEY,
+  useJsApiLoader({
+    googleMapsApiKey: "AIzaSyCsrrrpOOwg4dGdrllX-ZA0EnWEOu9nS0U",
     libraries: ["places"],
   });
 
@@ -21,7 +21,6 @@ export default function Particulars() {
     const value = e.target.value;
 
     setData({ ...showData, [name]: value });
-    console.log(showData);
   };
 
   const PostData = async () => {
