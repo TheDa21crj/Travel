@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-// import { useJsApiLoader, Autocomplete } from "@react-google-maps/api";
 import usePlacesAutocomplete, {
   getGeocode,
   getLatLng,
@@ -7,13 +6,6 @@ import usePlacesAutocomplete, {
 import useOnclickOutside from "react-cool-onclickoutside";
 
 export default function Particulars() {
-  // const google = window.google;
-
-  // useJsApiLoader({
-  //   googleMapsApiKey: "AIzaSyCsrrrpOOwg4dGdrllX-ZA0EnWEOu9nS0U",
-  //   libraries: ["places"],
-  // });
-
   const [showData, setData] = useState({
     name: "",
     age: "",
