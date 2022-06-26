@@ -104,7 +104,7 @@ export default function User() {
           />
         </div>
 
-        <button className="UserSubmit" onClick={PostData}>
+        <button className="btn btn-primary btn-block mt-4" onClick={PostData}>
           Submit
         </button>
       </div>
