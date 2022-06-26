@@ -8,7 +8,7 @@ export default function Home() {
 
   return (
     <div>
-      <div className="container">
+      <div className="containerMDIV">
         <div
           onClick={() => setDetails(true)}
           className={showDetails ? "showDetailsT" : ""}
