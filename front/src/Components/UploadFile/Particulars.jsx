@@ -99,9 +99,11 @@ export default function Particulars() {
         placeholder="Enter your Travel Destination"
       />
 
-      <input type="text" name="From" className="PartInp" placeholder="From" />
+      <div className="DurationofTravel">
+        <input type="text" name="From" className="PartInp" placeholder="From" />
 
-      <input type="text" name="To" className="PartInp" placeholder="To" />
+        <input type="text" name="To" className="PartInp" placeholder="To" />
+      </div>
 
       <button className="btn btn-primary btn-block mt-4" onClick={PostData}>
         Submit
