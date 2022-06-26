@@ -4,9 +4,10 @@
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    box-shadow: 10px 10px 50px grey;
+    box-shadow: 10px 10px 50px lightgrey;
     padding: 1% 0%;
     border-radius: 10px;
+    transition: all 0.3s;
 }
 
 .containerMDIV div {
