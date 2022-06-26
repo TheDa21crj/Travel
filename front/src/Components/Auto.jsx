@@ -6,8 +6,6 @@ import Particulars from "./UploadFile/Particulars";
 export default function Auto() {
   return (
     <div>
-      <p>Auto</p>
-
       <div className="FileUploadDiv">
         <div className="FileUploadPDiv">
           <FileUpload />
