@@ -61,7 +61,8 @@ const FileUpload = () => {
       .then((places) => {
         console.log(places);
       });
-  });
+  }, []);
+
   return (
     <Fragment>
       {message ? <Message msg={message} /> : null}
