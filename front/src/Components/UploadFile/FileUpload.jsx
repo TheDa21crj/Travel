@@ -1,4 +1,4 @@
-import React, { Fragment, useState } from "react";
+import React, { Fragment, useState, useEffect } from "react";
 import Message from "./Message";
 import Progress from "./Progress";
 import axios from "axios";
@@ -42,6 +42,7 @@ const FileUpload = () => {
       setUploadedFile({ fileName, filePath, textPdf });
 
       setMessage("File Uploaded");
+      console.log(textPdf);
     } catch (err) {
       if (err.response.status === 500) {
         setMessage("There was a problem with the server");
@@ -52,6 +53,15 @@ const FileUpload = () => {
     }
   };
 
+  useEffect(() => {
+    fetch(
+      "https://api.geoapify.com/v2/places?categories=commercial&filter=rect:7.735282,48.586797,7.756289,48.574457&limit=200&apiKey=dc2c91bab7a64641b83c2486d8e0da0a"
+    )
+      .then((resp) => resp.json())
+      .then((places) => {
+        console.log(places);
+      });
+  });
   return (
     <Fragment>
       {message ? <Message msg={message} /> : null}
@@ -80,7 +90,7 @@ const FileUpload = () => {
         <div className="row mt-5">
           <div className="col-md-6 m-auto">
             <p className="text-center">{uploadedFile.fileName}</p>
-            {uploadedFile ? <p>{uploadedFile.textPdf}</p> : ""}
+            {/* {uploadedFile ? <p>{uploadedFile.textPdf}</p> : ""} */}
           </div>
         </div>
       ) : null}
