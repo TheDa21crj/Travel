@@ -2,12 +2,12 @@ import React, { useState } from "react";
 import { useJsApiLoader, Autocomplete } from "@react-google-maps/api";
 
 export default function Particulars() {
-  const google = window.google;
+  // const google = window.google;
 
-  useJsApiLoader({
-    googleMapsApiKey: "AIzaSyCsrrrpOOwg4dGdrllX-ZA0EnWEOu9nS0U",
-    libraries: ["places"],
-  });
+  // useJsApiLoader({
+  //   googleMapsApiKey: "AIzaSyCsrrrpOOwg4dGdrllX-ZA0EnWEOu9nS0U",
+  //   libraries: ["places"],
+  // });
 
   const [showData, setData] = useState({
     name: "",
@@ -81,16 +81,16 @@ export default function Particulars() {
         onChange={DataInp}
       />
 
-      <Autocomplete>
-        <input
-          type="text"
-          name="address"
-          className="PartInp"
-          placeholder="Enter Your Address"
-          value={showData.address}
-          onChange={DataInp}
-        />
-      </Autocomplete>
+      {/* <Autocomplete> */}
+      <input
+        type="text"
+        name="address"
+        className="PartInp"
+        placeholder="Enter Your Address"
+        value={showData.address}
+        onChange={DataInp}
+      />
+      {/* </Autocomplete> */}
 
       <input
         type="text"
