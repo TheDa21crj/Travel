@@ -1,11 +1,12 @@
-.container {
+.containerMDIV {
+    width: 100%;
     margin: 20px 0px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
 
-.container div {
+.containerMDIV div {
     user-select: none;
     -webkit-user-select: none;
     -khtml-user-select: none;
