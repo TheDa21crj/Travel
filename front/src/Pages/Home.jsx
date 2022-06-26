@@ -7,7 +7,7 @@ export default function Home() {
 
   return (
     <div>
-      <div>
+      <div className="container">
         <div onClick={() => setDetails(true)}>Filled by the User</div>
         <div onClick={() => setDetails(false)}>
           Extract automatically from the document
