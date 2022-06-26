@@ -14,5 +14,12 @@
     cursor: pointer;
 }
 
+.showDetailsT,
+.showDetailsF {
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+    border-color: #0069d9;
+}
+
 
 /* #0069D9 */
