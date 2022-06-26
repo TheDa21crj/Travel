@@ -130,26 +130,21 @@ export default function Particulars() {
         onChange={DataInp}
       />
 
-      {/* <Autocomplete> */}
-      {/* <input
-        type="text"
-        name="address"
-        className="PartInp"
-        placeholder="Enter Your Address"
-        value={showData.address}
-        onChange={DataInp}
-      /> */}
-      {/* </Autocomplete> */}
       <div ref={ref}>
         <input
           value={value}
-          onChange={handleInput}
+          onChange={() => {
+            handleInput();
+            DataInp();
+          }}
+          name="address"
           disabled={!ready}
           className="PartInp"
           placeholder="Enter Your Address"
         />
         {status === "OK" && <ul>{renderSuggestions()}</ul>}
       </div>
+
       <input
         type="text"
         name="Destination"
