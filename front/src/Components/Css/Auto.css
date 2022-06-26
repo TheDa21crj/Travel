@@ -23,4 +23,11 @@
     transition: all 0.3s;
 }
 
-.PartInp:hover {}
+.PartInp:hover {
+    border-color: #0069d9;
+}
+
+.PartInp:focus {
+    border-color: transparent;
+    box-shadow: 5px 5px 20px #8cc4ff;
+}
