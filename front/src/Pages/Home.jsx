@@ -11,13 +11,13 @@ export default function Home() {
       <div className="containerMDIV">
         <div
           onClick={() => setDetails(true)}
-          className={showDetails ? "showDetailsT" : ""}
+          className={showDetails ? "showDetailsT" : "false"}
         >
           Filled by the User
         </div>
         <div
           onClick={() => setDetails(false)}
-          className={showDetails ? "" : "showDetailsF"}
+          className={showDetails ? "false" : "showDetailsF"}
         >
           Extract automatically from the document
         </div>
