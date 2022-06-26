@@ -10,7 +10,6 @@ export default function Particulars() {
     name: "",
     age: "",
     sex: "",
-    address: "",
     travel: "",
     From: "",
     To: "",
@@ -30,11 +29,12 @@ export default function Particulars() {
       name !== "" ||
       age !== "" ||
       sex !== "" ||
-      address !== "" ||
       travel !== "" ||
       From !== "" ||
-      To !== ""
+      To !== "" ||
+      value !== ""
     ) {
+      let address = value;
       let data = await fetch(
         "https://travel-511c1-default-rtdb.firebaseio.com/data.json",
         {
@@ -47,6 +47,9 @@ export default function Particulars() {
             age,
             sex,
             address,
+            travel,
+            From,
+            To,
           }),
         }
       );
@@ -56,8 +59,11 @@ export default function Particulars() {
         name: "",
         age: "",
         sex: "",
-        address: "",
+        travel: "",
+        From: "",
+        To: "",
       });
+      value = "";
     }
   };
 
@@ -143,11 +149,9 @@ export default function Particulars() {
 
       <div ref={ref}>
         <input
+          type="text"
           value={value}
-          onChange={() => {
-            handleInput();
-            DataInp();
-          }}
+          onChange={handleInput}
           name="address"
           disabled={!ready}
           className="PartInp"
