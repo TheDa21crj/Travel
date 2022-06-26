@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import User from "./../Components/User";
 import Auto from "./../Components/Auto";
-import from "./Css/Home.css";
+import "./Css/Home.css";
 
 export default function Home() {
   const [showDetails, setDetails] = useState(false);
 
   return (
     <div>
-      <div className={HCSS.container}>
+      <div className="container">
         <div onClick={() => setDetails(true)}>Filled by the User</div>
         <div onClick={() => setDetails(false)}>
           Extract automatically from the document
