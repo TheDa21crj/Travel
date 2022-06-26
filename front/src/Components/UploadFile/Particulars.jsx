@@ -131,14 +131,14 @@ export default function Particulars() {
       />
 
       {/* <Autocomplete> */}
-      <input
+      {/* <input
         type="text"
         name="address"
         className="PartInp"
         placeholder="Enter Your Address"
         value={showData.address}
         onChange={DataInp}
-      />
+      /> */}
       {/* </Autocomplete> */}
       <div ref={ref}>
         <input
@@ -146,16 +146,16 @@ export default function Particulars() {
           onChange={handleInput}
           disabled={!ready}
           className="PartInp"
-          placeholder="Enter your Travel Destination"
+          placeholder="Enter Your Address"
         />
         {status === "OK" && <ul>{renderSuggestions()}</ul>}
       </div>
-      {/* <input
+      <input
         type="text"
         name="Destination"
         className="PartInp"
         placeholder="Enter your Travel Destination"
-      /> */}
+      />
 
       <div className="DurationofTravel">
         <input type="text" name="From" className="PartInp" placeholder="From" />
