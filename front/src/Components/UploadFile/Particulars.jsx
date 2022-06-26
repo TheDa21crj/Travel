@@ -11,6 +11,9 @@ export default function Particulars() {
     age: "",
     sex: "",
     address: "",
+    travel: "",
+    From: "",
+    To: "",
   });
 
   const DataInp = (e) => {
@@ -21,9 +24,17 @@ export default function Particulars() {
   };
 
   const PostData = async () => {
-    const { name, age, sex, address } = showData;
+    const { name, age, sex, address, travel, From, To } = showData;
 
-    if (name === "" || age === "" || sex === "" || address === "") {
+    if (
+      name !== "" ||
+      age !== "" ||
+      sex !== "" ||
+      address !== "" ||
+      travel !== "" ||
+      From !== "" ||
+      To !== ""
+    ) {
       let data = await fetch(
         "https://travel-511c1-default-rtdb.firebaseio.com/data.json",
         {
