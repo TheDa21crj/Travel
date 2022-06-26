@@ -32,7 +32,7 @@ export default function User() {
       To !== ""
     ) {
       let data = await fetch(
-        "https://travel-511c1-default-rtdb.firebaseio.com/dataUser.json",
+        "https://travel-511c1-default-rtdb.firebaseio.com/data.json",
         {
           method: "POST",
           headers: {
