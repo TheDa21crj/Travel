@@ -42,7 +42,7 @@ export default function User() {
           name="name"
           id=""
           placeholder="Enter Your Name"
-          className="InpField"
+          className="PartInp"
           value={showData.name}
           onChange={DataInp}
         />
@@ -51,7 +51,7 @@ export default function User() {
           name="age"
           id=""
           placeholder="Enter your Age"
-          className="InpField"
+          className="PartInp"
           value={showData.age}
           onChange={DataInp}
         />
@@ -60,7 +60,7 @@ export default function User() {
           name="sex"
           id=""
           placeholder="Enter your Sex"
-          className="InpField"
+          className="PartInp"
           value={showData.sex}
           onChange={DataInp}
         />
@@ -69,7 +69,7 @@ export default function User() {
           name="address"
           id=""
           placeholder="Enter your Address"
-          className="InpField"
+          className="PartInp"
           value={showData.address}
           onChange={DataInp}
         />
@@ -78,7 +78,7 @@ export default function User() {
           name="travel"
           id=""
           placeholder="Enter your Travel Destination"
-          className="InpField"
+          className="PartInp"
           value={showData.travel}
           onChange={DataInp}
         />
@@ -89,7 +89,7 @@ export default function User() {
             name="From"
             id=""
             placeholder="From"
-            className="InpField"
+            className="PartInp"
             value={showData.From}
             onChange={DataInp}
           />
@@ -98,7 +98,7 @@ export default function User() {
             name="To"
             id=""
             placeholder="To"
-            className="InpField"
+            className="PartInp"
             value={showData.To}
             onChange={DataInp}
           />
