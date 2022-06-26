@@ -9,8 +9,16 @@ export default function Home() {
   return (
     <div>
       <div className="container">
-        <div onClick={() => setDetails(true)}>Filled by the User</div>
-        <div onClick={() => setDetails(false)}>
+        <div
+          onClick={() => setDetails(true)}
+          className={showDetails ? "showDetailsT" : ""}
+        >
+          Filled by the User
+        </div>
+        <div
+          onClick={() => setDetails(false)}
+          className={showDetails ? "" : "showDetailsF"}
+        >
           Extract automatically from the document
         </div>
       </div>
