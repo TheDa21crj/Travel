@@ -104,21 +104,6 @@ export default function Particulars() {
 
   return (
     <div>
-      {/*  */}
-      <p>Test</p>
-      <div ref={ref}>
-        <input
-          value={value}
-          onChange={handleInput}
-          disabled={!ready}
-          placeholder="Enter your Travel Destination"
-        />
-        {/* We can use the "status" to decide whether we should display the dropdown or not */}
-        {status === "OK" && <ul>{renderSuggestions()}</ul>}
-      </div>
-      {/*  */}
-
-      {/*  */}
       <p className="Particulars">Particulars</p>
       <input
         type="text"
@@ -155,13 +140,22 @@ export default function Particulars() {
         onChange={DataInp}
       />
       {/* </Autocomplete> */}
-
-      <input
+      <div ref={ref}>
+        <input
+          value={value}
+          onChange={handleInput}
+          disabled={!ready}
+          className="PartInp"
+          placeholder="Enter your Travel Destination"
+        />
+        {status === "OK" && <ul>{renderSuggestions()}</ul>}
+      </div>
+      {/* <input
         type="text"
         name="Destination"
         className="PartInp"
         placeholder="Enter your Travel Destination"
-      />
+      /> */}
 
       <div className="DurationofTravel">
         <input type="text" name="From" className="PartInp" placeholder="From" />
