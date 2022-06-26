@@ -111,7 +111,7 @@ export default function Particulars() {
           value={value}
           onChange={handleInput}
           disabled={!ready}
-          placeholder="Where are you going?"
+          placeholder="Enter your Travel Destination"
         />
         {/* We can use the "status" to decide whether we should display the dropdown or not */}
         {status === "OK" && <ul>{renderSuggestions()}</ul>}
