@@ -20,18 +20,47 @@ export default function User() {
   };
 
   const PostData = async () => {
-    console.log(showData);
+    const { name, age, sex, address, travel, From, To } = showData;
 
-    setData({
-      ...showData,
-      name: "",
-      age: "",
-      sex: "",
-      address: "",
-      travel: "",
-      From: "",
-      To: "",
-    });
+    if (
+      name !== "" ||
+      age !== "" ||
+      sex !== "" ||
+      address !== "" ||
+      travel !== "" ||
+      From !== "" ||
+      To !== ""
+    ) {
+      let data = await fetch(
+        "https://travel-511c1-default-rtdb.firebaseio.com/dataUser.json",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name,
+            age,
+            sex,
+            address,
+            travel,
+            From,
+            To,
+          }),
+        }
+      );
+
+      setData({
+        ...showData,
+        name: "",
+        age: "",
+        sex: "",
+        address: "",
+        travel: "",
+        From: "",
+        To: "",
+      });
+    }
   };
 
   return (
