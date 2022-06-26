@@ -35,7 +35,7 @@ export default function User() {
   };
 
   return (
-    <div>
+    <div className="UserMdiv">
       <div className="InpPDiv">
         <input
           type="text"
