@@ -83,7 +83,7 @@ export default function User() {
           onChange={DataInp}
         />
         <p>Duration of Travel</p>
-        <div>
+        <div className="DurationofTravel">
           <input
             type="text"
             name="From"
