@@ -12,3 +12,13 @@
     align-items: center;
     padding: 20px 0px;
 }
+
+.DurationofTravel {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.DurationofTravel input {
+    width: 40%;
+}
