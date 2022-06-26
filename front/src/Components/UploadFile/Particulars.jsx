@@ -162,15 +162,31 @@ export default function Particulars() {
 
       <input
         type="text"
-        name="Destination"
+        name="travel"
         className="PartInp"
         placeholder="Enter your Travel Destination"
+        value={showData.travel}
+        onChange={DataInp}
       />
 
       <div className="DurationofTravel">
-        <input type="text" name="From" className="PartInp" placeholder="From" />
+        <input
+          type="text"
+          name="From"
+          className="PartInp"
+          placeholder="From"
+          value={showData.From}
+          onChange={DataInp}
+        />
 
-        <input type="text" name="To" className="PartInp" placeholder="To" />
+        <input
+          type="text"
+          name="To"
+          className="PartInp"
+          placeholder="To"
+          value={showData.To}
+          onChange={DataInp}
+        />
       </div>
 
       <button className="btn btn-primary btn-block mt-4" onClick={PostData}>
