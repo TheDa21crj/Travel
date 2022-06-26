@@ -13,16 +13,6 @@
     padding: 20px 0px;
 }
 
-.InpField {
-    outline: none;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    border-style: solid;
-    border-width: 1px;
-    border-radius: 5px;
-    width: 300px;
-}
-
 .UserSubmit {
     margin-top: 20px;
     padding: 10px 20px;
